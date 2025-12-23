@@ -1,15 +1,19 @@
 #include <iostream>
 using namespace std;
-
+void ch(char c){
+    if (c >= 'a' && c <= 'z'){
+        cout << "Lowercase letter" << endl;
+    }
+    else if (c >= 'A' && c <= 'Z'){
+        cout << "Uppercase letter" << endl;
+    }
+    else{
+        cout << "Maybe it's digital or something else" << endl;
+    }
+}
 int main(){
-    int arr[5];
-    for(int i = 0; i < 5; i++){
-        cout << "Enter element [" << i << "] : ";
-        cin >> arr[i];
-    }
-    cout << "\nElement in reverse order: ";
-    for(int i = 4; i >= 0; i--){ 
-        cout << arr[i] << " ";
-    }
-    cout << endl;
+    char c;
+    cout << "Enter a character: ";
+    cin >> c;
+    ch(c);
 }
